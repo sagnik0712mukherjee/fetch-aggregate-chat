@@ -1,7 +1,5 @@
-1. Agentic Solution - crewAI
-2. At least 1 external tool - DuckDuckGo search
-3. Needs to perform scraping
-4. Fetch and get documents with multiple data-type - charts, SS, text, tables
-5. Build an Agentic RAG agent
-
-============
+1. The project implements a robust agentic solution utilizing the crewAI framework to orchestrate multiple specialized sub-agents.
+2. It leverages at least one external tool, specifically DuckDuckGo search, to dynamically retrieve real-time information from the internet.
+3. The system is designed to perform targeted web scraping to extract the most relevant on-page content based on user queries.
+4. It effectively fetches and processes documents containing multiple diverse data types, including text, tabular data, and image descriptions.
+5. Ultimately, the application builds a cohesive Agentic Retrieval-Augmented Generation (RAG) system that validates inputs, handles execution errors gracefully, and evaluates its own conversational responses.
