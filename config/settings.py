@@ -14,6 +14,15 @@ task_data_path = "task_data"
 web_top_k = 5
 rag_top_k = 3
 
-# ====== User Chat Exit Queries ======
-exit_queries = ["bye","quit","exit"]
+# ====== Guardrail Settings ======
+min_chunk_length = 10
+max_chunk_length = 5000
+min_chunk_count = 1
+max_query_length = 500
 
+# ====== Eval Settings ======
+eval_relevance_threshold = 3.0
+eval_top_k_precision = True
+
+# ====== User Chat Exit Queries ======
+exit_queries = ["bye", "quit", "exit"]

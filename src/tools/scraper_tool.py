@@ -1,6 +1,7 @@
 import requests
 from crewai.tools import tool
 
+
 @tool("WebScraper")
 def scrape_url(url):
     """
@@ -8,11 +9,14 @@ def scrape_url(url):
 
     Args:
         url (str): the Url of the web-page to be scraped
-    
+
     Return:
         Textual html data
     """
-    
-    all_data = requests.get(url)
-    
-    return all_data.text
+
+    try:
+        all_data = requests.get(url, timeout=10)
+        all_data.raise_for_status()
+        return all_data.text
+    except Exception as e:
+        return f"[Scraper Error] Failed to scrape {url}. Error: {str(e)}"

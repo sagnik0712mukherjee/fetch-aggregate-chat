@@ -20,9 +20,12 @@ def llm_response(user_query, docs, index):
         f"If context does not provide information about the sought query, just return 'I am sorry, I am unable to answer your question due to lack of knowledge!'"
     )
 
-    response = client.chat.completions.create(
-        model=llm_model,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,
-    )
-    return response.choices[0].message.content.strip()
+    try:
+        response = client.chat.completions.create(
+            model=llm_model,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.1,
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        return f"[LLM Error] I encountered an error while processing your request: {str(e)}"

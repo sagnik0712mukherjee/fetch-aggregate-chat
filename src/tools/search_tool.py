@@ -1,6 +1,7 @@
 from langchain_community.tools import DuckDuckGoSearchRun
 from crewai.tools import tool
 
+
 @tool("DuckDuckGoSearch")
 def web_search(query):
     """
@@ -9,11 +10,13 @@ def web_search(query):
     Args:
         query (str): the user Query for search
         top_k (int | default = 3): the number of results to be retrieved.
-    
+
     Return:
         Search results in array of strings.
     """
 
-    results = DuckDuckGoSearchRun().run(query)
-    
-    return results
+    try:
+        results = DuckDuckGoSearchRun().run(query)
+        return results
+    except Exception as e:
+        return f"[Search Error] Failed to search for '{query}'. Error: {str(e)}"
