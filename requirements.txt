@@ -1,0 +1,6 @@
+crewai
+openai
+faiss-cpu
+sentence-transformers
+langchain-community
+requests

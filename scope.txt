@@ -1,0 +1,7 @@
+1. Agentic Solution - crewAI
+2. At least 1 external tool - DuckDuckGo search
+3. Needs to perform scraping
+4. Fetch and get documents with multiple data-type - charts, SS, text, tables
+5. Build an Agentic RAG agent
+
+============
