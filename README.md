@@ -77,18 +77,7 @@ FAC/
 
 ---
 
-## Potential Improvements
+## Author
 
-- Guardrails and input validation on agent outputs before indexing.
-- Try-catch blocks around scraping, embedding, and LLM calls for graceful error handling.
-- OOP refactor: wrap agents and tasks into proper classes for better testability and reuse.
-- Evaluation metrics: add retrieval precision, answer relevance scoring (e.g. using DeepEval or RAGAS).
-- A simple UI (Streamlit or Gradio) to replace the terminal interface.
-- Server-level strategies to reduce load on the agentic chunking step, such as caching scraped content, pre-chunking pipelines, or async agent execution.
-
----
-
-## Where AI Was Used
-
-- `requirements.txt` was generated with AI assistance based on the imports across the codebase.
-- This README was drafted with AI assistance.
+**Sagnik Mukherjee**  
+[GitHub Profile](https://github.com/sagnik0712mukherjee)
